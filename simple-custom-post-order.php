@@ -437,7 +437,7 @@ class Taxonomy_Order_Engine {
 				return $objects;
 
       // do not apply ordering to list that contains just names
-      if ( !is_object( $objects[0] ) )
+      if ( !array_key_exists(0, $objects) || !is_object( $objects[0] ) )
         return $objects;
       
 			// placeholder for ordered objects
